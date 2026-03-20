@@ -3,10 +3,10 @@ const app = express()
 const PORT = 5000
 
 app.use(express.json())
-// const productsRoute = require("./router/products")
+const productsRoute = require("./router/products")
 // const cartRoute = require("./router/cart")
 
-// app.use("/products", productsRoute)
+app.use("/products", productsRoute)
 // app.use("/cart", cartRoute)
 
 const homeRoute = require("./router/home")

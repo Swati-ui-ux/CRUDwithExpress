@@ -1,8 +1,11 @@
 
+const path = require('path')
 
 
 let getProducts = (req,res) => {
-res.send("<h1>Fetch all products</h1>")
+
+    res.sendFile(path.join(__dirname, "..", "views", "products.html"))
+    
 }
 
 let postProducts = (req,res) => {
