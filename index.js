@@ -2,11 +2,14 @@ const express = require('express');
 const app = express()
 const PORT = 5000
 
-const studentsRoute = require("./router/students")
+
+const productsRoute = require("./router/products")
 const homeRoute = require("./router/home")
-const coursesRoute = require("./router/courses")
-app.use("/students", studentsRoute)
-app.use("/courses", coursesRoute)
+const usersRoute = require("./router/users")
+const cartRoute = require("./router/cart")
+app.use("/products", productsRoute)
+app.use("/users", usersRoute)
+app.use("/cart", cartRoute)
 app.use("/", homeRoute)
 
 
