@@ -1,0 +1,12 @@
+[
+  { "id": 1, "name": "Amit", "age": 22 },
+  { "id": 2, "name": "Priya", "age": 24 },
+  { "id": 3, "name": "Rahul", "age": 21 },
+  { "id": 4, "name": "Sneha", "age": 23 },
+  { "id": 5, "name": "Vikas", "age": 25 },
+  { "id": 6, "name": "Neha", "age": 22 },
+  { "id": 7, "name": "Arjun", "age": 26 },
+  { "id": 8, "name": "Pooja", "age": 20 },
+  { "id": 9, "name": "Karan", "age": 27 },
+  { "id": 10, "name": "Anjali", "age": 23 }
+]

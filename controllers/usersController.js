@@ -1,15 +1,19 @@
-let getUsers =(req, res) => {
-   
-    res.send("<h1>Fetch all users</h1>")
-}
 
 
-let postUser =(req, res) => {
-    res.send(" Add a new user.")
-}
+const { sortingValuesUsingParams ,readingDataFromFile} = require("../services/userService")
 
-let getUserWithId = (req, res) => {
-    res.send(`Fetch user with id ${req.params.id}`)
+let getUsers = (req, res) => {
     
+    // read data from json file
+    let users;
+    users = readingDataFromFile()
+    
+    
+    // filter  users by age if query parameter is present
+    users = sortingValuesUsingParams(req.query,users)
+   res.send(users)
 }
-module.exports= {getUsers,postUser,getUserWithId}
+
+
+
+module.exports= {getUsers}
