@@ -10,14 +10,17 @@ app.use(express.static(path.join(__dirname,"public")))
 const productsRoute = require("./router/products")
 const homeRoute = require("./router/home")
 const usersRoute = require("./router/users")
-// const cartRoute = require("./router/cart")
+const createUser = require("./router/users")
+const getUserWithId = require("./router/users")
+const cartRoute = require("./router/cart")
 
-// app.use("/cart", cartRoute)
+app.use("/cart", cartRoute)
 
-
+app.use("/users", createUser)
+app.use("/users", usersRoute)
+app.use("/users/:id", getUserWithId)
 app.use("/products", productsRoute)
 app.use("/", homeRoute)
-app.use("/users", usersRoute)
 
 
 

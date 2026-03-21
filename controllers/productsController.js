@@ -1,5 +1,6 @@
 
 const path = require('path')
+const { sendResponse } = require('../utils/response')
 
 
 let getProducts = (req,res) => {
@@ -8,9 +9,8 @@ let getProducts = (req,res) => {
 }
 
 let postProducts = (req, res) => {
-    console.log("Headers",req.headers)
- console.log("body",req.body)
-res.status(201).json({message:"product created successfully", product: req.body})}
+   return sendResponse(res,req.body,201)
+}
 
 let getProductWithId = (req,res) => {
     res.send(`<h1>Fetch product with id ${req.params.id}</h1>`)
